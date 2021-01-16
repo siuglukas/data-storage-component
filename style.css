@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  background: hsl(229, 57%, 11%);
+}
+
+/* Centering items in the middle of a page */
+.body-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Setting background image */
+.bg-img {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  background-image: url("./images/bg-desktop.png");
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+/* Container that wraps both cards */
+.component-wrapper {
+  width: 80%;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styling 1st card */
+.component-1 {
+  background: hsl(228, 56%, 26%);
+  border-radius: 10px 100px 10px 10px;
+  height: 180px;
+  width: 320px;
+  margin: 50px;
+}
+
+.logo {
+  margin: 30px;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+  margin-left: 30px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c122c;
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+/* styling 2nd card */
+
+.component-2 {
+  padding: 40px;
+  color: hsl(243, 100%, 93%);
+  position: relative;
+  border-radius: 10px;
+  background: hsl(228, 56%, 26%);
+  height: 60px;
+  width: 500px;
+  z-index: 1;
+  align-self: flex-end;
+  margin-bottom: 50px;
+}
+
+.used-storage {
+  margin-bottom: 15px;
+}
+.used-storage-number {
+  font-weight: bold;
+}
+
+/* range input */
+.input-wrapper {
+  position: relative;
+  border-radius: 10px;
+  padding: 3px;
+  font-weight: bold;
+  background-color: hsl(229, 57%, 11%);
+}
+
+.gradient-fill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 15px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.circle {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: white;
+  margin-right: 2px;
+}
+
+.zero-gb {
+  position: absolute;
+  left: 0;
+  top: 25px;
+}
+.thousand-gb {
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
+
+/* Cloud styling */
+.cloud-wrapper {
+  position: absolute;
+  right: 35px;
+  top: -35px;
+  display: inline-block;
+}
+
+.rectangle {
+  background: white;
+  border-radius: 6px 6px 0 6px;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangle-down {
+  position: relative;
+  left: 130px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 20px solid rgb(255, 255, 255);
+}
+
+.cloud-content-flex {
+  display: flex;
+  align-items: center;
+}
+
+.cloud-number {
+  font-size: 30px;
+  color: black;
+  text-shadow: -1px 1px, 1px 1px, 1px 1px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.cloud-text {
+  color: #9b9a9f;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 1px 0 #9b9a9f;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .bg-img {
+    display: none;
+  }
+  .triangle-down {
+    display: none;
+  }
+
+  .body-wrapper {
+    background-image: url("./images/bg-mobile.png");
+    background-size: cover;
+  }
+
+  .component-wrapper {
+    flex-direction: column;
+  }
+
+  .component-2 {
+    width: 80%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cloud-wrapper {
+    position: static;
+    order: 3;
+    align-self: center;
+    margin-top: 20px;
+    top: 120px;
+    right: 125px;
+  }
+
+  .rectangle {
+    border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cloud-wrapper {
+    margin-top: 30px;
+  }
+}
